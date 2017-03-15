@@ -34,6 +34,7 @@ jQuery(document).ready(function($) {
             sectionSelector: '.fp-section',
             slideSelector: '.fp-slide',
             responsiveWidth: 1200,
+            fixedElements: '.sidebar',
         });    
     }
 

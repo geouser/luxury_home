@@ -1,0 +1,64 @@
+.sidebar {
+    position: fixed;
+    left: 55px;
+    padding-left: 75px;
+    top: 235px;
+    padding-top: 60px;
+    width: 300px;
+
+    .back-link {
+        position: absolute;
+        top: 0;
+        left: 75px;
+        color: #8a8f99;
+        font-family: $f;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            left: -65px;
+            width: 40px;
+            height: 12px;
+            background-image: url(../images/back-arrow.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .widget {
+        &-menu {
+            .menu-item {
+                list-style: none;
+                color: #8a8f99;
+                font-family: $f;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin-bottom: 20px;
+                position: relative;
+
+                a {
+                    color: inherit;
+                }
+
+                &.current-menu-item {
+                    color: #e1cb69;
+                    
+                    &:before {
+                        content: '';
+                        width: 40px;
+                        height: 1px;
+                        background-color: #e1cb69;
+                        position: absolute;
+                        top: 50%;
+                        left: -65px;
+                    }
+                }
+            }
+        }
+    }
+
+}
