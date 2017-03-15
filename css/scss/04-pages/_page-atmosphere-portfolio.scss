@@ -39,6 +39,12 @@
     }
     &--gallery {
         width: 920px;
+        @media (max-width: 1700px) {
+            width: 800px;
+        }
+        @media (max-width: 1500px) {
+            width: 700px;
+        }
         &:after {
             display: none;
         }
