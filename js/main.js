@@ -148,6 +148,13 @@ jQuery(document).ready(function($) {
     })
 
 
+
+    $('.photo-slider').slick({
+        arrows: true,
+        dots: false
+    })
+
+
     /*----------------------------
                               SEND FORM
     -------------------------*/
