@@ -4,9 +4,11 @@
 html,
 body {
 	height: 100%;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+body {
+  font-family: $h;
+}
 
 // lAYOUT
 // ---------------------------
@@ -16,6 +18,10 @@ body {
 	text-align: center;
 }
 
+.scroll {
+  max-height: 100%;
+  overflow: auto;
+}
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);

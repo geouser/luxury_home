@@ -26,6 +26,33 @@ function exist(el){
 jQuery(document).ready(function($) {
 
     /*---------------------------
+                                  Fullpage
+    ---------------------------*/
+    if ( exist('#fullpage') ) {
+        $('#fullpage').fullpage({
+            lockAnchors: true,
+            sectionSelector: '.fp-section',
+            slideSelector: '.fp-slide',
+            responsiveWidth: 1200,
+        });    
+    }
+
+
+    /*---------------------------
+                                  Custom scroll-bar
+    ---------------------------*/
+    if ( exist('.scroll') ) {
+        $('.scroll').mCustomScrollbar({
+            axis: 'y'
+        });
+
+        $(window).on('resize', function(event) {
+            event.preventDefault();
+            $('.scroll').mCustomScrollbar("update");
+        });
+    }
+
+    /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
     $(function() { 
