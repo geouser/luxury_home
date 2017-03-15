@@ -38,9 +38,11 @@ jQuery(document).ready(function($) {
         });    
     }
 
-    $('.grid').masonry({
-      itemSelector: '.grid-item'
-    });
+    if ( exist('.grid') ) {
+        $('.grid').masonry({
+          itemSelector: '.grid-item'
+        });
+    }
 
     /*---------------------------
                                   Custom scroll-bar
