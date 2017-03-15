@@ -1,5 +1,31 @@
 .article {
-    > img {
-        
+    text-align: left;
+    h1 {
+           background-image: -webkit-linear-gradient(90deg,#b07b01,#f4e992);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 25px;
+        font-size: 32px;
+        font-weight: 400;
+        font-family: $a;
+        &::first-letter { 
+            font-size: 42px;
+        }
     }
+    p {
+        font-size: 16px;
+        line-height: 30px;
+        color: #e0e0e0;
+        margin-bottom: 22px;
+    }
+}
+
+.framed {
+    border: 2px solid #504A2D;
+    padding: 12px;
+}
+.alignleft {
+    margin-right: 35px;
+    margin-bottom: 20px;
+    float: left;
 }
