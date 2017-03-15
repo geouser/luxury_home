@@ -23,11 +23,15 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 	text-align: center;
+  
   &--md {
     width: 920px;
   }
   &--lg {
     width: 1100px;
+  }
+  &--xs {
+    width: 750px;
   }
 }
 
