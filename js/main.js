@@ -38,6 +38,9 @@ jQuery(document).ready(function($) {
         });    
     }
 
+    $('.grid').masonry({
+      itemSelector: '.grid-item'
+    });
 
     /*---------------------------
                                   Custom scroll-bar
@@ -52,6 +55,7 @@ jQuery(document).ready(function($) {
             $('.scroll').mCustomScrollbar("update");
         });
     }
+
 
     /*---------------------------
                                   ADD CLASS ON SCROLL
