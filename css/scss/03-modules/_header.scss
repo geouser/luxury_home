@@ -2,18 +2,9 @@
 .mainHeader {
     @include position(absolute, 0, 0, auto, 0);
     @include transition(all, .4s);
-    height: 100px;
-    
-    background: #2C3840;
-    
-    .wrapper {
-        height: 100%;
-        @include flex();
-    }
-
-    &__info {
-        color: #fff;
-    }
+    height: 165px;
+    padding: 0 15%;
+    @include flex();
 }
 
 
@@ -22,12 +13,14 @@
 .mainNav {
     ul {
         list-style-type: none;
+        width: -webkit-calc(50% - 85px);
+        width: calc(50% - 85px);
         li {
             display: inline-block;
             vertical-align: middle;
             margin: 0 10px;
             a {
-                color: #fff;
+                color: #8a8f99;
             }
         }
     }
@@ -41,6 +34,14 @@
         color: #fff;
         font-size: 18px;
         font-weight: 100;
+    }
+}
+
+.logo {
+    width: 170px;
+    img {
+        display: block;
+        width: 100%;
     }
 }
 
