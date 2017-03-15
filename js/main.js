@@ -34,7 +34,6 @@ jQuery(document).ready(function($) {
             sectionSelector: '.fp-section',
             slideSelector: '.fp-slide',
             responsiveWidth: 1200,
-            fixedElements: '.sidebar',
         });    
     }
 
@@ -158,7 +157,8 @@ jQuery(document).ready(function($) {
 
     $('.photo-slider').slick({
         arrows: true,
-        dots: false
+        dots: false,
+        infinite: false
     })
 
 
@@ -271,5 +271,15 @@ jQuery(document).ready(function($) {
     if ( exist( '#map_canvas' ) ) {
         googleMap_initialize();
     }
+
+    $('.photo-slider--gallery').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+              enabled:true
+            }
+        });
+    });
 
 }); // end file
