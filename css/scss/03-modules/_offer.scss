@@ -1,5 +1,18 @@
 .offer {
     height: 800px;
+    max-height: 100%;
+    @include flex($direction: column, $alignI: center, $justify: center);
+    
+    background-image: url("../images/offer-main.jpg");
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    
+    h1 {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
 }
 
 /*
