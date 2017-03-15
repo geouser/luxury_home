@@ -1,0 +1,39 @@
+.footer {
+    @include position(fixed, auto, 0, 25px, 0);
+    @include flex();
+    z-index: 10;
+    &__left,
+    &__right {
+        width: 165px;
+    }
+    padding: 0 3%;
+}
+
+.languages {
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 7px;
+        &:nth-of-type(1) {
+            margin-left: 0;
+        }
+        a {
+            color: #8a8f99;
+            font-size: 14px;
+            text-transform: uppercase;
+            @include transition(all, .2s);
+        }
+        &.active a,
+        &:hover a {
+            color: #e1cb69;
+        }
+    }
+}
+
+.powered {
+    color: #8a8f99;
+    font-size: 14px;
+    a {
+        color: #e1cb69;
+    }
+}
