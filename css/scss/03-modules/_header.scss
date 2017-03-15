@@ -1,11 +1,44 @@
          
 .mainHeader {
     @include position(fixed, 0, 0, auto, 0);
-    @include transition(all, .4s);
     z-index: 100;
     height: 165px;
     padding: 0 15%;
     @include flex($direction: column, $alignI: center, $justify: center);
+    @media (max-width: 1200px) {
+        padding: 0 15px;
+        height: 120px;
+    }
+    @media (max-width: 760px) {
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        text-align: center;
+        padding: 40px;
+        background-color: rgba(0,0,0,.95);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all .6s;
+           -moz-transition: all .6s;
+            -ms-transition: all .6s;
+             -o-transition: all .6s;
+                transition: all .6s;
+        -webkit-transform: translateY(-100%);
+           -moz-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+             -o-transform: translateY(-100%);
+                transform: translateY(-100%);
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transform: none;
+               -moz-transform: none;
+                -ms-transform: none;
+                 -o-transform: none;
+                    transform: none;
+        }
+    }
 }
 
 
@@ -14,15 +47,32 @@
 .mainNav {
     width: 100%;
     @include flex();
+    @media (max-width: 760px) {
+        display: block;
+        margin: 10px auto;
+    }
     ul {
         list-style-type: none;
         width: -webkit-calc(50% - 85px);
         width: calc(50% - 85px);
         @include flex($justify: space-around);
+        @media (max-width: 1200px) {
+            width: -webkit-calc(50% - 55px);
+            width: calc(50% - 55px);
+        }
+        @media (max-width: 760px) {
+            display: block;
+            width: 100%;
+        }
         li {
             display: inline-block;
             vertical-align: middle;
             margin: 0 10px;
+            @media (max-width: 760px) {
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+            }
             a {
                 color: #8a8f99;
                 font-size: 14px;
@@ -30,6 +80,12 @@
                 @include transition(all, .2s);
                 &:hover {
                     color: #e1cb69;
+                }
+                @media (max-width: 1000px) {
+                    font-size: 13px;
+                }
+                @media (max-width: 760px) {
+                    font-size: 14px;
                 }
             }
         }
@@ -39,7 +95,6 @@
 .social {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 20px;
     a {
         color: #8a8f99;
         font-weight: 100;
@@ -50,22 +105,43 @@
         &:hover {
             color: #e1cb69;
         }
+        @media (max-width: 1000px) {
+            font-size: 16px;
+        }
+        @media (max-width: 760px) {
+            font-size: 14px;
+            margin: 0 4px;
+        }
+        @media (max-width: 400px) {
+            margin: 0 2px;
+        }
     }
     .gp i {
-        margin-top: 2px;
         width: 17px;
         height: 17px;
         display: inline-block;
+        position: relative;
+        top: 2px;
         background-image: url("../images/gp.svg");
         -webkit-background-size: 100% 100%;
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
+        @media (max-width: 1000px) {
+             width: 14px;
+            height: 14px;
+        }
+        @media (max-width: 760px) {
+                width: 12px;
+                height: 12px;
+                top: 1px;
+        }
     }
     .gp:hover i {
         background-image: url("../images/gp-h.svg");
     }
     .in i {
-        margin-top: 2px;
+        position: relative;
+        top: 2px;
         width: 17px;
         height: 17px;
         display: inline-block;
@@ -73,6 +149,15 @@
         -webkit-background-size: 100% 100%;
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
+        @media (max-width: 1000px) {
+             width: 14px;
+            height: 14px;
+        }
+        @media (max-width: 760px) {
+             width: 12px;
+                height: 12px;
+                top: 1px;
+        }
     }
     .in:hover i {
         background-image: url("../images/ins-h.svg");
@@ -81,9 +166,18 @@
 
 .logo {
     width: 170px;
+    display: block;
+    margin: 0 auto;
     img {
         display: block;
         width: 100%;
+    }
+    @media (max-width: 1200px) {
+        width: 100px;
+    }
+    @media (max-width: 760px) {
+        width: 140px;
+        margin: 30px auto;
     }
 }
 
@@ -101,12 +195,12 @@
 .menu-button     {    
     display: none;
     width: 40px;
-    height: 40px;
+    height: 39px;
     @include position(fixed, 15px, 15px, auto, auto);
     margin: auto; 
     cursor: pointer;
     z-index: 100;
-    background-color: peru;
+    background-color: #e2cc67;
     border: none;
     -webkit-border-radius: 4px;
             border-radius: 4px;
@@ -115,9 +209,10 @@
         @include position(absolute, auto, 0, auto, 0);
         width: 60%;
         height: 3px;
-        background-color: #fff;
+        background-color: #0c0d0d;
         -webkit-border-radius: 1px;
-        border-radius: 1px;
+        border-radius: 2px;
+        overflow: hidden;
         @include transition(all, .4s);
     }
 
@@ -125,13 +220,6 @@
     .middle_line           {   top: 18px;  margin: auto;}
     .bottom_line           {   bottom: 10px; margin: auto;}
 
-    &.active               {
-        -webkit-transform: translate(260px);
-           -moz-transform: translate(260px);
-            -ms-transform: translate(260px);
-             -o-transform: translate(260px);
-                transform: translate(260px);
-    }
     &.active .top_line     {   @include transform(rotate(45deg)); top: 45%;}
     &.active .bottom_line  {   @include transform(rotate(-45deg)); bottom: 45%;}
     &.active .middle_line  {   width: 0; left: 50%;}

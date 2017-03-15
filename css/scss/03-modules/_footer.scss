@@ -1,12 +1,26 @@
 .footer {
     @include position(fixed, auto, 0, 25px, 0);
-    @include flex();
+    @include flex($alignI: flex-end);
     z-index: 10;
+
     &__left,
     &__right {
         width: 165px;
+        @media (max-width: 760px) {
+            width: 125px;
+        }
+         @media (max-width: 400px) {
+             width: auto;
+             min-width: 90px;
+         }
     }
     padding: 0 3%;
+    @media (max-width: 1000px) {
+        bottom: 15px;
+    }
+    @media (max-width: 760px) {
+        bottom: 10px;
+    }
 }
 .fp-section {
     .footer {
@@ -15,6 +29,7 @@
 }
 
 .languages {
+    text-align: right;
     li {
         display: inline-block;
         vertical-align: middle;
@@ -27,6 +42,14 @@
             font-size: 14px;
             text-transform: uppercase;
             @include transition(all, .2s);
+            display: block;
+            @media (max-width: 1000px) {
+                font-size: 13px;
+            }
+            @media (max-width: 760px) {
+                font-size: 12px;
+                margin-left: 4px;
+            }
         }
         &.active a,
         &:hover a {
@@ -40,5 +63,15 @@
     font-size: 14px;
     a {
         color: #e1cb69;
+    }
+    @media (max-width: 1000px) {
+        font-size: 13px;
+    }
+    @media (max-width: 760px) {
+        font-size: 12px;
+    }
+    @media (max-width: 400px) {
+        font-size: 10px;
+        padding-bottom: 2px;
     }
 }
