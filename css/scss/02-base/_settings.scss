@@ -57,6 +57,7 @@ body {
       right: 0;
       bottom: 0;
       z-index: 5;
+      pointer-events: none;
     }
   }
 }
@@ -64,6 +65,9 @@ body {
 
 .fp-tableCell {
   padding: 165px 0 50px;
+}
+.no-padding-bottom .fp-tableCell {
+  padding-bottom: 0;
 }
 
 .mCSB_inside > .mCSB_container {
