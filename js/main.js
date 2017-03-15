@@ -135,6 +135,18 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Sliders
+    ---------------------------*/
+    $('.atm-slider').on('init', function(event) {
+        event.preventDefault();
+        $(this).parent('.atm-block').addClass('visible');
+    });
+    $('.atm-slider').slick({
+        arrows: true,
+        dots: false
+    })
+
 
     /*----------------------------
                               SEND FORM
