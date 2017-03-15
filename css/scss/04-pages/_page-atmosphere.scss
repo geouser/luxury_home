@@ -1,0 +1,118 @@
+.atmosphere .col-3:nth-child(2n) {
+    .atm-block {
+        transform: translateY(-20px);
+    }
+}
+.atmosphere .col-3:nth-child(2n-1) {
+    .atm-block {
+        transform: translateY(20px);
+    }
+}
+
+
+.atm-block {
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    margin: 30px 0;
+
+    &.visible {
+        opacity: 1;
+    }
+
+    .label {
+        color: #8a8f99;
+        text-transform: uppercase;
+        font-family: $f;
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
+        letter-spacing: 0.125em;
+        line-height: 25px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 4;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .letter {
+        font-family: $p;
+        font-size: 140px;
+        color: #e6d375;
+        opacity: 0.07;
+        line-height: 25px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 3;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #121315;
+        opacity: 0.93;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .atm-slider {
+        width: 230px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+
+        .slick-arrow {
+            width: 36px;
+            height: 100%;
+            background-color: #121315;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+    }
+
+
+    &:hover {
+        .label,
+        .letter,
+        &:before {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .atm-slider {
+            .slick-arrow {
+                opacity: 0.93;
+            }
+        }
+    }
+}

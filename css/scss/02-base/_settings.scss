@@ -10,6 +10,11 @@ body {
   font-family: $h;
   background-size: cover;
   background-position: 50% 50%;
+  background-image: url(../images/bg-inner.jpg);
+
+  &.blured {
+    background-image: url(../images/bg-inner-blured.jpg);
+  }
 }
 
 // lAYOUT
