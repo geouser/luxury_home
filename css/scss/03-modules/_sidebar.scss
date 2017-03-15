@@ -1,0 +1,13 @@
+.sidebar {
+    position: fixed;
+    left: 55px;
+    padding-left: 75px;
+    top: 235px;
+    padding-top: 60px;
+
+    .back-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
