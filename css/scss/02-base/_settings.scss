@@ -42,6 +42,12 @@ body {
   max-height: 100%;
   overflow: auto;
 
+  .wrapper {
+    padding-bottom: 50px;
+  }
+}
+
+.fp-section {
   &.shadow {
     position: relative;
 
