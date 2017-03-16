@@ -96,7 +96,7 @@ body {
   padding: 165px 0 50px;
 
   @media (max-width: 1500px) {
-    padding: 100px 0 50px;
+    padding: 125px 0 50px;
   }
 }
 .no-padding-bottom .fp-tableCell {
@@ -107,6 +107,10 @@ body {
     .fp-tableCell {
         display: block;
         padding-top: 235px;
+
+        @media (max-width: 1500px) {
+          padding-top: 120px;
+        }
   }
 }
 
