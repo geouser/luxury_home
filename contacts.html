@@ -64,7 +64,7 @@
                                    <address>Viale Asia 1b - first floor<br> 00144 Roma - ITALY</address>
                                    <p>Web site: <a href="http://www.luxhom.it/">www.luxhom.it</a></p>
                                    <p>Mail: <a href="mailto: info@luxhom.it">info@luxhom.it</a></p>
-                                   <button class="button">Contact us</button>
+                                   <button href="#modal-popup" class="button magnific">Contact us</button>
                                </div>
                            </div>
                            <div class="map-column">
@@ -75,7 +75,7 @@
                                    <p>Office Phone: <a href="tel:+971(0) 455.88.678">+971(0) 455.88.678</a></p>
                                    <p>Web site: <a href="http://www.luxhom.it/">www.luxhom.it</a></p>
                                    <p>Mail: <a href="mailto: info@luxhom.it">info@luxhom.it</a></p>
-                                   <button class="button">Contact us</button>
+                                   <button href="#modal-popup" class="button magnific">Contact us</button>
                                </div>
                            </div>
                        </div>
@@ -107,7 +107,25 @@
         
 
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup">
+            <form action="" class="form">
+                <div class="form-group">
+                    <label for="">Your name</label>
+                    <input type="text" name="name" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="">Your E-mail</label>
+                    <input type="text" name="email" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="">Type your message</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="button">Send</button>
+                </div>
+            </form>
+        </div>
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Спасибо!</p>

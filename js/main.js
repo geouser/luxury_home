@@ -139,7 +139,7 @@ jQuery(document).ready(function($) {
         overflowY: 'auto',
         modal: false,
 
-        closeBtnInside: true,
+        closeBtnInside: false,
         preloader: false,
         
         midClick: true,

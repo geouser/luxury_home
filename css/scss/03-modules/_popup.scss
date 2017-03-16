@@ -1,0 +1,17 @@
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+    opacity: 0.95;
+}
+.mfp-container {
+    overflow: auto;
+}
+
+.popup {
+    width: 590px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 30px 0;
+
+    @media (max-width: 1199px) {
+        padding: 40px 15px;
+    }
+}
