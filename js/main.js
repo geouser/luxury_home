@@ -44,6 +44,9 @@ jQuery(document).ready(function($) {
         });
     }
 
+    $('.scroll-down').click(function(){
+        $.fn.fullpage.moveSectionDown();
+    });
     /*---------------------------
                                   Custom scroll-bar
     ---------------------------*/
