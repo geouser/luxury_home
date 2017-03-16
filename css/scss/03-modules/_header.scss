@@ -5,9 +5,11 @@
     height: 165px;
     padding: 0 15%;
     @include flex($direction: column, $alignI: center, $justify: center);
+    @media (max-width: 1500px) {
+        height: 100px;
+    }
     @media (max-width: 1200px) {
         padding: 0 15px;
-        height: 120px;
     }
     @media (max-width: 760px) {
         right: 0;
@@ -173,7 +175,7 @@
         display: block;
         width: 100%;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1500px) {
         width: 100px;
     }
     @media (max-width: 760px) {
