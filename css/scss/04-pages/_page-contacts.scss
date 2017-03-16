@@ -28,6 +28,12 @@
     height: 300px;
     max-width: 100%;
     background-color: #000;
+
+    .gm-style a img,
+    .gmnoprint {
+        display: none!important;
+    }
+
     @media (max-width: 1700px) {
         height: 250px;
     }
