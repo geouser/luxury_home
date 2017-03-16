@@ -45,9 +45,29 @@ body {
   .wrapper {
     padding-bottom: 50px;
   }
+
+  @media (max-width: 1199px) {
+    .wrapper {
+      padding-bottom: 0
+    }
+  }
+
+  &.mCS_destroyed {
+    height: auto!important;
+    max-height: none;
+    overflow: hidden;
+
+    .mCustomScrollBox {
+      max-height: none!important;
+    }
+  }
+
 }
 
 .fp-section {
+  @media (max-width: 1199px) {
+    height: auto!important;
+  }
   &.shadow {
     position: relative;
 

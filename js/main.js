@@ -48,13 +48,16 @@ jQuery(document).ready(function($) {
                                   Custom scroll-bar
     ---------------------------*/
     if ( exist('.scroll') ) {
-        $('.scroll').mCustomScrollbar({
-            axis: 'y'
-        });
-
-        $(window).on('resize', function(event) {
+        $(window).on('load resize', function(event) {
             event.preventDefault();
-            $('.scroll').mCustomScrollbar("update");
+            $('.scroll').mCustomScrollbar({
+                axis: 'y'
+            });
+            if ( $(window).width() < 1200 ) {
+                $('.scroll').mCustomScrollbar("destroy");
+            } else {
+                $('.scroll').mCustomScrollbar("update");
+            }
         });
     }
 
@@ -77,17 +80,17 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                 PAGE ANCHORS
     ---------------------------*/
-    $('.mainNav a, .anchor').click(function() {
+    /*$('.mainNav a, .anchor').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
         }, 800);
         return false;
-    });
+    });*/
 
     /*---------------------------
                                 ACTIVATE MENU ITEM OVER CURRENT SECTION
     ---------------------------*/
-    var $sections = $('section');
+    /*var $sections = $('section');
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
         var $currentSection;
@@ -103,7 +106,7 @@ jQuery(document).ready(function($) {
           $('a').removeClass('active');
           $("[href=#"+id+"]").addClass('active');
         })
-    });
+    });*/
 
     /*---------------------------
                                   MENU TOGGLE
