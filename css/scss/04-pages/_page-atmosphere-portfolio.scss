@@ -17,7 +17,14 @@
             border-radius: 0;
             background-size: auto 80%;
         }
-
+        @media (max-width: 800px) {
+            width: 45px;
+            height: 65px;
+        }
+        @media (max-width: 400px) {
+            width: 40px;
+            height: 60px;
+        }
         &.slick-prev {
             left: -80px;
 
@@ -66,6 +73,13 @@
         padding: 12px;
         border: 2px solid #322F20;
         margin-top: 0px;
+        @media (max-width: 1500px) {
+            padding: 10px;
+        }
+        @media (max-width: 800px) {
+            border: 1px solid #504A2D;
+            padding: 6px;
+        }
         &:before {
             content: "";
             display: block;
@@ -81,6 +95,18 @@
             -webkit-background-size: 100% 100%;
                  -o-background-size: 100% 100%;
                     background-size: 100% 100%;
+            @media (max-width: 1500px) {
+                right: 10px;
+                top:10px;
+                width: 40px;
+                height: 40px;
+            }
+            @media (max-width: 800px) {
+                right: 6px;
+                top:6px;
+                width: 34px;
+                height: 34px;
+            }
         }
     }
 }
