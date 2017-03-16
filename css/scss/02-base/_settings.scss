@@ -4,6 +4,11 @@
 html,
 body {
 	height: 100%;
+
+  @media (max-width: 1199px) {
+    height: 100%!important;
+    overflow: hidden!important;
+  }
 }
 
 body {
@@ -17,6 +22,14 @@ body {
   }
   &.sharp {
     background-image: url(../images/bg-inner.jpg);
+  }
+}
+
+
+.fullpage {
+  @media (max-width: 1199px) {
+    height: 100%!important;
+    overflow: auto;
   }
 }
 
