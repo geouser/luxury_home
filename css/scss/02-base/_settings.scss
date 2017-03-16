@@ -11,9 +11,12 @@ body {
   background-size: cover;
   background-position: 50% 50%;
   background-image: url(../images/bg-inner.jpg);
-  background-color: #111112;
+    
   &.blured {
     background-image: url(../images/bg-inner-blured.jpg);
+  }
+  &.sharp {
+    background-image: url(../images/bg-inner.jpg);
   }
 }
 
@@ -32,6 +35,12 @@ body {
   }
   &--xl {
     width: 1360px;
+    @media (max-width: 1500px) {
+      width: 1200px;
+    }
+    @media (max-width: 1200px) {
+      padding: 0 15px;
+    }
   }
   &--xs {
     width: 750px;

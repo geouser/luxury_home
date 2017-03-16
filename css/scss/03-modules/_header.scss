@@ -13,6 +13,9 @@
     }
     @media (max-width: 1200px) {
         padding: 0 15px;
+        &.hasScrolled {
+            background-color: #111112;
+        }
     }
     @media (max-width: 760px) {
         right: 0;

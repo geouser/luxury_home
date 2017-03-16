@@ -19,6 +19,14 @@
         width: 140px;
         height: 40px;
         line-height: 40px;
+        font-size: 12px;
+    }
+    @media (max-width: 600px) {
+        width: 120px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 11px;
+        letter-spacing: .4px;
     }
 }
 
