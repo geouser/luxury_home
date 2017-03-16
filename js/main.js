@@ -39,7 +39,8 @@ jQuery(document).ready(function($) {
 
     if ( exist('.grid') ) {
         $('.grid').masonry({
-          itemSelector: '.grid-item'
+          itemSelector: '.grid-item',
+          percentPosition: true
         });
     }
 

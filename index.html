@@ -20,7 +20,15 @@
     </head>
     <body class="home">
 
-
+        <style>
+        .overlay__left,.overlay__right{width:50%;height:100%;background-color:#0F1012;z-index:1000}.logo-spin,.overlay__left,.overlay__right{position:fixed;top:0}.overlay__left{left:0;-webkit-animation:5s fadeLeft forwards;animation:5s fadeLeft forwards}@-webkit-keyframes fadeLeft{0%,60%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes fadeLeft{0%,60%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}}.overlay__right{right:0;-webkit-animation:5s fadeRight forwards;animation:5s fadeRight forwards}@-webkit-keyframes fadeRight{0%,60%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes fadeRight{0%,60%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(100%);transform:translateX(100%)}}.logo-spin{width:300px;height:300px;left:0;right:0;bottom:0;margin:auto;z-index:10001;-webkit-animation:4s fade forwards;animation:4s fade forwards}.logo-spin img{display:block;margin:0 auto;max-width:100%}@-webkit-keyframes fade{0%,50%{opacity:1}80%{opacity:0}100%{opacity:0;visibility:hidden;-webkit-transform:translateY(-2000px);transform:translateY(-2000px)}}@keyframes fade{0%,70%{opacity:1}100%{opacity:0}}.spin{display:block;margin-bottom:20px!important;-webkit-animation:5s spin;animation:5s spin}@-webkit-keyframes spin{0%,100%{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}50%{-webkit-transform:rotateY(0);transform:rotateY(0)}}@keyframes spin{0%,100%{-webkit-transform:rotateY(0);transform:rotateY(0)}50%{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}}
+        </style>
+        <div class="overlay__left"></div>
+        <div class="logo-spin">
+            <img src="images/medallion.png" alt="" class="spin">
+            <img src="images/logo-text.png" alt="">
+        </div>
+        <div class="overlay__right"></div>
        
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
