@@ -12,12 +12,26 @@
         background-size: auto 100%;
         background-color: transparent;
 
+        @media (max-width: 1199px) {
+            background-color: rgba(0, 0, 0, .9);
+            border-radius: 0;
+            background-size: auto 80%;
+        }
+
         &.slick-prev {
             left: -80px;
+
+            @media (max-width: 1199px) {
+                left: 0;
+            }
         }
 
         &.slick-next {
             right: -80px;
+
+            @media (max-width: 1199px) {
+                right: 0;
+            }
         }
     }
     .slick-slide {
