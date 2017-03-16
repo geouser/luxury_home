@@ -163,6 +163,33 @@ jQuery(document).ready(function($) {
     })
 
 
+    $('.video-slider').each(function(index, el) {
+        $(this).on('init', function(event, slick) {
+            event.preventDefault();
+            $(this).magnificPopup({
+                delegate: 'a',
+                type: 'iframe',
+                tLoading: 'Loading video #%curr%...',
+                mainClass: 'mfp-fade',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                }
+            });
+        });
+    });
+    
+    $('.video-slider').slick({
+        arrows: true,
+        dots: false,
+        infinite: false
+    })
+
+
+
     /*----------------------------
                               SEND FORM
     -------------------------*/
@@ -226,42 +253,29 @@ jQuery(document).ready(function($) {
 
     /*Google map init*/
     var map;
-    function googleMap_initialize() {
-        var lat = $('#map_canvas').data('lat');
-        var long = $('#map_canvas').data('lng');
+    function googleMap_initialize(el) {
+        var lat = el.data('lat');
+        var long = el.data('lng');
 
-        var mapCenterCoord = new google.maps.LatLng(lat, long+0.002);
+        var mapCenterCoord = new google.maps.LatLng(lat, long);
         var mapMarkerCoord = new google.maps.LatLng(lat, long);
-        if ( $(window).width() <= 1000 ) {
-            mapCenterCoord = new google.maps.LatLng(lat, long);
-            mapMarkerCoord = new google.maps.LatLng(lat, long);
-        }
-        $(window).resize(function(event) {
-            if ( $(window).width() <= 1000 ) {
-                mapCenterCoord = new google.maps.LatLng(lat, long);
-                mapMarkerCoord = new google.maps.LatLng(lat, long);
-            } else {
-                mapCenterCoord = new google.maps.LatLng(lat, long+0.002);
-                mapMarkerCoord = new google.maps.LatLng(lat, long);
-            }
-        });
 
         var mapOptions = {
             center: mapCenterCoord,
-            zoom: 17,
+            zoom: 12,
             //draggable: false,
             disableDefaultUI: true,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        map = new google.maps.Map(el[0], mapOptions);
         var markerImage = new google.maps.MarkerImage('images/location.png');
         var marker = new google.maps.Marker({
             icon: markerImage,
             position: mapMarkerCoord, 
             map: map,
-            title:"Чисто Строй"
+            title:"Luxury Home"
         });
         
         $(window).resize(function (){
@@ -269,8 +283,10 @@ jQuery(document).ready(function($) {
         });
     }
 
-    if ( exist( '#map_canvas' ) ) {
-        googleMap_initialize();
+    if ( exist( '.map' ) ) {
+        $('.map').each(function(index, el) {
+            googleMap_initialize($(this));
+        });
     }
 
     $('.photo-slider--gallery').each(function() { // the containers for all your galleries
