@@ -37,6 +37,16 @@
         line-height: 30px;
         color: #e0e0e0;
         margin-bottom: 22px;
+        @media (max-width: 1600px) {
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+        @media (max-width: 1500px) {
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
     }
     &--full {
         h3 {
@@ -44,6 +54,14 @@
             font-family: $p;
             margin-bottom: 50px;
             text-align: center;
+            @media (max-width: 1600px) {
+                margin-bottom: 40px;
+                font-size: 22px;
+            }
+            @media (max-width: 1500px) {
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
         }
     }
     &--centered {
@@ -80,25 +98,67 @@
 .framed {
     border: 2px solid #504A2D;
     padding: 12px;
+    @media (max-width: 1500px) {
+        padding: 10px;
+    }
+    @media (max-width: 800px) {
+        border: 1px solid #504A2D;
+        padding: 6px;
+    }
 }
 .alignleft {
     margin-right: 35px;
     margin-bottom: 20px;
     float: left;
+    @media (max-width: 1500px) {
+        margin-right: 20px;
+        margin-bottom: 6px;
+        max-width: 50%;
+    }
+     @media (max-width: 600px) {
+         width: 100%;
+         float: none;
+         display: block;
+         margin: 10px auto;
+         max-width: 100%;
+     }
 }
 
 .image-and-list {
     margin: 35px 0;
     @include flex();
+    @media (max-width: 1600px) {
+        margin: 25px 0;
+    }
+    @media (max-width: 1500px) {
+        margin: 15px 0;
+    }
     ul {
         width: 25%;
+        @media (max-width: 1500px) {
+            width: 30%;
+        }
+        @media (max-width: 600px) {
+            width: 100%;
+            text-align: center;
+        }
         &:first-of-type {
             text-align: left;
             padding-right: 20px;
+            @media (max-width: 600px) {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
         }
         &:last-of-type {
             text-align: right;
             padding-left: 20px;
+            @media (max-width: 600px) {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
         }
         li {
             font-size: 14px;
@@ -110,9 +170,25 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
+            @media (max-width: 1500px) {
+                font-size: 12px;
+            }
+            @media (max-width: 600px) {
+                margin-bottom: 14px;
+            }
         }
     }
     img {
         width: 50%;
+        @media (max-width: 1500px) {
+            width: 40%;
+        }
+        @media (max-width: 600px) {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            display: block;
+            margin: 20px auto;
+        }
     }
 }
