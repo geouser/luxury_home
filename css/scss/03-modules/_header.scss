@@ -85,10 +85,29 @@
                 color: #8a8f99;
                 font-size: 14px;
                 text-transform: uppercase;
+                position: relative;
                 @include transition(all, .2s);
-                &:hover,
-                &.active {
+                &:hover {
                     color: #e1cb69;
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 120%;
+                    height: 1px;
+                    position: absolute;
+                    left: -10%;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    background: #e1cb69;
+                    display: none;
+                }
+                &.active {
+                    &:after {
+                        display: block;
+                    }
                 }
                 @media (max-width: 1000px) {
                     font-size: 13px;
