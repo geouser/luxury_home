@@ -21,6 +21,12 @@
     @media (max-width: 760px) {
         bottom: 10px;
     }
+    @media (max-width: 1199px) {
+        bottom: 0;
+        padding-bottom: 10px;
+        padding-top: 4px;
+        background-color: #111112;
+    }
 }
 .fp-section {
     .footer {

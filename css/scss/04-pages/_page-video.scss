@@ -3,7 +3,7 @@
     width: 900px;
     outline: 2px solid #2A2B2C;
     outline-offset: 10px;
-    margin-top: 50px;
+    margin-top: 40px;
 
     &:after {
         display: none;
@@ -81,10 +81,11 @@
             color: #e0e0e0;
             font-family: $h;
             margin: 0 auto;
-            margin-top: 25px;
+            margin-top: 15px;
             line-height: 30px;
             letter-spacing: 0.025em;
             max-width: 100%;
+            font-size: 16px;
         }
     }
 }
